@@ -8,7 +8,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function oneRound(playerSelection, computerSelection) {
-	playerSelection = playerSelection.toLowerCase();
+	computerSelection = getComputerChoice();
 	if (playerSelection === "piedra" && computerSelection === "tijera" || playerSelection === "papel" && computerSelection === "piedra" ||
 		playerSelection === "tijera" && computerSelection === "papel") {
 		console.log("Ganaste! Elegiste " + playerSelection + " y tu oponente " + computerSelection);
@@ -37,3 +37,25 @@ function game() {
 		console.log("Empataron " + playerScore + " a " + computerScore + " intentalo otra vez!");
 	}
 };
+
+const piedra = document.getElementById('piedra');
+const papel = document.getElementById('papel');
+const tijera = document.getElementById('tijera');
+
+function clickPiedra() {
+	oneRound("piedra", getComputerChoice());
+  }
+  
+  function clickPapel() {
+	oneRound("papel", getComputerChoice());
+  }
+  
+  function clickTijera() {
+	oneRound("tijera", getComputerChoice());
+  }
+  
+  piedra.addEventListener('click', clickPiedra);
+  papel.addEventListener('click', clickPapel);
+  tijera.addEventListener('click', clickTijera);
+
+
