@@ -11,14 +11,14 @@ function oneRound(playerSelection, computerSelection) {
 	computerSelection = getComputerChoice();
 	if (playerSelection === "piedra" && computerSelection === "tijera" || playerSelection === "papel" && computerSelection === "piedra" ||
 		playerSelection === "tijera" && computerSelection === "papel") {
-		console.log("Ganaste! Elegiste " + playerSelection + " y tu oponente " + computerSelection);
+		resultado.innerText = "Ganaste! Elegiste " + playerSelection + " y tu oponente " + computerSelection;
 		playerScore += 1;
 	} else if (playerSelection === "piedra" && computerSelection === "papel" || playerSelection === "papel" && computerSelection === "tijera" ||
 		playerSelection === "tijera" && computerSelection === "piedra") {
-		console.log("Uhh! Perdiste. Tu oponente eligio " + computerSelection + " y tu " + playerSelection);
+		resultado.innerText = "Uhh! Perdiste. Tu oponente eligio " + computerSelection + " y tu " + playerSelection;
 		computerScore += 1; 
 	} else {
-		console.log("Empataron! Ambos eligieron " + playerSelection);
+		resultado.innerText = "Empataron! Ambos eligieron " + playerSelection;
 	}
 };
 
@@ -57,5 +57,13 @@ function clickPiedra() {
   piedra.addEventListener('click', clickPiedra);
   papel.addEventListener('click', clickPapel);
   tijera.addEventListener('click', clickTijera);
+
+  const div = document.getElementById('ronda');
+  const resultado = document.createElement('p');
+  div.appendChild(resultado);
+  
+
+
+  
 
 
