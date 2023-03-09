@@ -61,6 +61,10 @@ function clickPiedra() {
   const div = document.getElementById('ronda');
   const resultado = document.createElement('p');
   div.appendChild(resultado);
+  resultado.style.fontFamily = "Climate Crisis";
+  resultado.style.textAlign = "center";
+  resultado.style.marginTop = "40px";
+
   
 
 
