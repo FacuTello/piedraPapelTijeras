@@ -1,6 +1,15 @@
+body{
+    background-color: #FDFF7C ;
+}
+
 .titulo{
-    font-family: 'Climate Crisis', cursive;
-    font-size: 20px;
+    font-family: 'Space Mono', cursive;
+    font-size: 25px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Space Mono', monospace;
     text-align: center;
 }
 
@@ -9,14 +18,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 img{
     width: 90px;
     height: 90px;
-    border-top: 20px;
+    border-top: 15px;
     cursor: pointer;
+    border-radius: 30%;
 }
 
 
