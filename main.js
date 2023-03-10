@@ -86,6 +86,17 @@ oneRound("piedra", getComputerChoice());
   resultadoFinal.style.textAlign = "center";
   resultadoFinal.style.marginTop = "40px";
 
+  function changeStyles(){
+	resultadoFinal.style.fontSize = '60px';
+	puntaje.style.fontSize = '60px';
+  };
+
+  window.addEventListener('resize', function() {
+	if (window.matchMedia('(min-width: 600px)').matches) {
+	  changeStyles();
+	}
+});
+
 
 
 
